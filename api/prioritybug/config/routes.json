@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/prioritybugs",
+      "handler": "prioritybug.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/prioritybugs/count",
+      "handler": "prioritybug.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/prioritybugs/:id",
+      "handler": "prioritybug.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/prioritybugs",
+      "handler": "prioritybug.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/prioritybugs/:id",
+      "handler": "prioritybug.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/prioritybugs/:id",
+      "handler": "prioritybug.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

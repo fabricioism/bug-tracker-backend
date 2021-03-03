@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prioritybugs",
+  "info": {
+    "name": "prioritybug",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "level": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "min": 0
+    },
+    "description": {
+      "type": "text"
+    },
+    "bugs": {
+      "via": "prioritybug",
+      "collection": "bug"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

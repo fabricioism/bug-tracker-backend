@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bugs",
+  "info": {
+    "name": "bug",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "endDate": {
+      "type": "datetime"
+    },
+    "startDate": {
+      "type": "datetime"
+    },
+    "prioritybug": {
+      "model": "prioritybug",
+      "via": "bugs"
+    },
+    "bugstate": {
+      "model": "bugstate",
+      "via": "bugs"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "users": {
+      "via": "bugs",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bugstates",
+  "info": {
+    "name": "bugstate",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "bugs": {
+      "via": "bugstate",
+      "collection": "bug"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bugstates",
+      "handler": "bugstate.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bugstates/count",
+      "handler": "bugstate.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bugstates/:id",
+      "handler": "bugstate.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bugstates",
+      "handler": "bugstate.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bugstates/:id",
+      "handler": "bugstate.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bugstates/:id",
+      "handler": "bugstate.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

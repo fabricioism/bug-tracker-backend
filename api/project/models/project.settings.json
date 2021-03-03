@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "datetime"
+    },
+    "endDate": {
+      "type": "datetime"
+    },
+    "bugs": {
+      "collection": "bug"
+    },
+    "users": {
+      "via": "projects",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}
